@@ -1,0 +1,75 @@
+{
+  "manifestVersion": 1,
+  "id": "VS2003-Build-Task",
+  "version": "0.1.0",
+  "name": "Visual Studio 2003 Build Task",
+  "scopes": [ "vso.build_execute", "vso.build" ],
+  "description": "Builds Visual Studio .NET 2003 solutions and project files.",
+  "baseUri": "",
+  "publisher": "igorrosamacedo",
+  "public": false,
+  "icons": {
+    "default": "img/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "Build",
+    "VS2003"
+  ],
+  "screenshots": [
+        {
+            "path": "screenshots/AddTask.png"
+        },
+        {
+            "path": "screenshots/ConfigTask.png"
+        }
+    ],
+  "links": {
+    "home": {
+      "uri": "https://bit.ly"
+    },
+    "getstarted": {
+      "uri": "https://bit.ly"
+    },
+    "learn": {
+      "uri": "https://bit.ly"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "repository": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "BuildVS2003"
+    }
+  ],
+  "categories": [
+    "Build and release"
+  ],
+  "contributions": [
+    {
+      "id": "buildvs2003",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "type": "ms.vss-distributed-task.task",
+      "properties": {
+        "name": "BuildVS2003"
+      }
+    }
+  ]
+}
