@@ -32,7 +32,7 @@ I am successfully running the task on Windows Server 2012 R2 VM on Azure.
 ## Parameters of the task
 These are the parameters necessary to use the task. Requeried parameters are hightlighted with a __*__:
 - __TargetFile*__: Path to target files (solutions or projects) to be built. The default value is '*.sln', so it will look for all solutions file bellow the repository path informed.
-- __Config*__: The configuration to build the application (debug, release).
+- __Config*__: The configuration to build the application (debug, release). The default value is 'debug'.
 
 ### Advanced
 The section provides advanced options:
