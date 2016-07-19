@@ -7,7 +7,7 @@
   "description": "Builds Visual Studio .NET 2003 solutions and project files.",
   "baseUri": "",
   "publisher": "igorrosamacedo",
-  "public": false,
+  "public": true,
   "icons": {
     "default": "img/logo.png"
   },
