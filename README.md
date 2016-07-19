@@ -14,7 +14,7 @@ To build websites though, as in Visual Studio 2003 web site projects has the dep
 The task requires the 'VS71COMNTOOLS' capability from the agent. This capability is normally available when Visual Studio 2003 is installed on the agent machine.  
 
 ## Pre-requisites for the task
-The followng pre-requisites need to be set-up for the task work properly:
+The following pre-requisites need to be set-up for the task work properly:
 
 ### Visual Studio 2003
 You will need a version of Visual Studio .NET 2003 installed in the build agent machine. As the task calls the 'devenv.exe' command, it is made necessary.
@@ -31,13 +31,13 @@ I am successfully running the task on Windows Server 2012 R2 VM on Azure.
 
 ## Parameters of the task
 These are the parameters necessary to use the task. Requeried parameters are hightlighted with a **\***:
-- **TargetFile\***: Path to target files (solutions or projects) to be built. The default value is '*.sln', so it will look for all solutions file bellow the repository path informed.
+- **TargetFile\***: Path to target files (solutions or projects) to be built. The default value is '\*.sln', so it will look for all solutions file bellow the repository path informed.
 - **Config\***: The configuration to build the application (debug, release).
 
 ### Advanced
 The section provides advanced options:
 - **DevEnvPath**: Agent full path to Microsoft Visual Studio 2003 'DevEnv.exe' file. If not informed, the agent will search for a 'VS71COMNTOOLS' enviroment variable. If it wasn't defined, the build will fail. The default value is 'C:\\Program Files (x86)\\Microsoft Visual Studio .NET 2003\\Common7\\IDE\\Devenv.exe' which is also the default installation path of VS2003.
-- **AppPoolName**: Application Pool to be used with the websites created to build webprojects. If not informed, the build will create a temporary application pool for each website. Important: the appliction pool identity needs to have permissions on the agent source directory. The default value is 'ASP.NET 1.1' that is the application pool created when you install .NET 1.1.
+- **AppPoolName**: Application Pool to be used with the websites created to build webprojects. If not informed, the build will create a temporary application pool for each website. Important: the application pool identity needs to have permissions on the agent source directory. The default value is 'ASP.NET 1.1' that is the application pool created when you install .NET 1.1.
 
 ## Known Issues
 Normally when you install Visual Studio 2003 the environment variable 'VS71COMNTOOLS' is created, and so the agent automatically creates a capability for it.
