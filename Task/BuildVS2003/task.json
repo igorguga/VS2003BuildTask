@@ -3,7 +3,7 @@
     "name": "Visual Studio .NET 2003 Build Task",
     "friendlyName": "Visual Studio 2003 Build",
     "description": "Build Visual Studio .NET 2003 solutions and project files.",
-    "helpMarkDown": "Webprojects: to enable the build of webprojects, this task will create a temporary website for each of them. Depending on the settings (see Advanced), temporary application pools will be created for each website. At the end of the build, all websites (and application pools) created are removed. More [information.](https://github.com/igorguga/VS2003BuildTask/blob/master/README.md)",
+    "helpMarkDown": "Webprojects: to enable the build of webprojects, this task will create a temporary website for each of them. Depending on the settings (see Advanced), temporary application pools will be created for each website. At the end of the build, all websites (and application pools) created are removed. [More information.](https://github.com/igorguga/VS2003BuildTask/blob/master/README.md)",
     "category": "Build",
     "visibility": [
                 "Build"
