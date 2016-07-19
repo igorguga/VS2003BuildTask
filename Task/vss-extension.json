@@ -30,27 +30,33 @@
     ],
   "links": {
     "home": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/igorguga/VS2003BuildTask"
     },
     "getstarted": {
-      "uri": "https://bit.ly"
-    },
-    "learn": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/igorguga/VS2003BuildTask/blob/master/README.md"
     },
     "support": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/igorguga/VS2003BuildTask/issues/new"
     },
     "repository": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/igorguga/VS2003BuildTask"
     },
     "issues": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/igorguga/VS2003BuildTask/issues"
     }
   },
   "branding": {
     "color": "rgb(220, 235, 252)",
     "theme": "light"
+  },
+  "content":
+  {
+    "details": {
+      "path": "details.md"
+    },
+    "license": {
+      "path": "license-terms.md"
+    }
   },
   "files": [
     {

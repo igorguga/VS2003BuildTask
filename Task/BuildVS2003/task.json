@@ -15,7 +15,7 @@
         "Patch": 16
     },
     "demands" : [
-      "VS2003"
+      "VS71COMNTOOLS"
     ],
     "minimumAgentVersion": "1.83.0",
     "groups": [

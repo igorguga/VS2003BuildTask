@@ -14,13 +14,13 @@ $buildSourcesDirectory = Get-TaskVariable -Context $distributedTaskContext -Name
 
 if (!$DevEnvPath)
 {
-	if ($env:VS2003)
+	if ($env:VS71COMNTOOLS)
 	{
-		$DevEnvPath = $env:VS2003
+		$DevEnvPath = $env:VS71COMNTOOLS
 	}
 	else
 	{
-		throw ("Invalid Microsoft Visual Studio 2003 DevEnv.exe path! Please inform a valid path or configure a ""VS2003"" system enviroment variable with the path on the agent machine.")
+		throw ("Invalid Microsoft Visual Studio 2003 DevEnv.exe path! Please inform a valid path or configure a ""VS71COMNTOOLS"" system enviroment variable with the path on the agent machine.")
 	}
 }
 
@@ -62,7 +62,7 @@ Function CreateWebSite([string] $siteName, [string] $physicalPath )
 
 		#Grant Application Pool Identity full control at website physical path
 		$acl = Get-Acl "$physicalPath"
-		$rule = New-Object System.Security.AccessControl.FileSystemAccessRule(“IIS APPPOOL\$AppPoolName”,”FullControl”, “ContainerInherit, ObjectInherit”, “None”, “Allow”)
+		$rule = New-Object System.Security.AccessControl.FileSystemAccessRule("IIS APPPOOL\$AppPoolName","FullControl", "ContainerInherit, ObjectInherit", "None", "Allow")
 		$acl.AddAccessRule($rule)
 		Set-Acl "$physicalPath" $acl
 
