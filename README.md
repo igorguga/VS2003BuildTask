@@ -1,4 +1,5 @@
 # Build Visual Studio .NET 2003
+![](./Task/screenshots/BuildLog.png)
 ## Overview
 The task is used to build Visual Studio .NET 2003 applications (.NET 1.1). Even though this version of Visual Studio is [no longer supported by Microsoft](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Visual%20Studio) (and not even [.NET 1.1](https://support.microsoft.com/en-us/lifecycle/search?sort=pn&alpha=.net%20framework)), there are many enterprises that still have legacy applications that run in this platform. Probably are applications so stable that don't worth the migration effort or, maybe, the migration schedule are so long that an immediate build automation for the 2003 version is necessary.
 
@@ -12,6 +13,8 @@ To build websites though, as in Visual Studio 2003 web site projects has the dep
  5. Finally, after the build was done, all the temporary websites are removed from the local IIS. 
 
 The task requires the 'VS71COMNTOOLS' capability from the agent. This capability is normally available when Visual Studio 2003 is installed on the agent machine.  
+
+![](./Task/screenshots/Demands.png)
 
 ## Pre-requisites for the task
 The following pre-requisites need to be set-up for the task work properly:
@@ -30,7 +33,9 @@ I am successfully running the task on Windows Server 2012 R2 VM on Azure.
 
 
 ## Parameters of the task
+![](./Task/screenshots/ConfigTask.png)
 These are the parameters necessary to use the task. Requeried parameters are hightlighted with a __*__:
+
 - __TargetFile*__: Path to target files (solutions or projects) to be built. The default value is '*.sln', so it will look for all solutions file bellow the repository path informed.
 - __Config*__: The configuration to build the application (debug, release). The default value is 'debug'.
 
@@ -42,6 +47,10 @@ The section provides advanced options:
 ## Known Issues
 Normally when you install Visual Studio 2003 the environment variable 'VS71COMNTOOLS' is created, and so the agent automatically creates a capability for it.
 
-The task rely on this capability to build. If, for any reason, this capability was not generated, you must manually create an user capability for 'VS71COMNTOOLS'.  The value for this user capability will depends on the following situations:
+The task rely on this capability to build. If, for any reason, this capability was not generated, you must manually create an user capability for 'VS71COMNTOOLS'. 
+
+![](./Task/screenshots/UserCapabilities.png)
+
+The value for this user capability will depends on the following situations:
 - If the advanced parameter **'DevEnvPath'** is informed, you can inform any value to 'VS71COMNTOOLS' capability, because the task will use the value of the parameter;
 - But, if the advanced parameter **'DevEnvPath'** is blank, you must inform the path to the parent folder of 'devenv.exe' file, or the build will fail because it will not find 'devenv.exe' file.  
