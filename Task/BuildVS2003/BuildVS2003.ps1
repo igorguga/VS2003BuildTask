@@ -97,7 +97,7 @@ Function HandleSolutionFile([string] $targetPath)
 			
 		foreach($match in $matches)
 		{
-			$values = ($matches -split '=')[1] -split ','
+			$values = ($match -split '=')[1] -split ','
 			$siteName = $values[0] -replace """","" #nome do projeto
 			$oldsiteUrl = $values[1] #url do projeto
 			$projFileName = $oldsiteUrl -replace """","" | Split-Path -Leaf
