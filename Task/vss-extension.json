@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "VS2003-Build-Task",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "Visual Studio 2003 Build Task",
   "scopes": [ "vso.build_execute", "vso.build" ],
   "description": "Builds Visual Studio .NET 2003 solutions and project files.",
